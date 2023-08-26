@@ -1,0 +1,85 @@
+//~ Fonts families
+//* POPPINS
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 900;
+  src: local('Poppins'), url('../fonts/Poppins/woff2/Poppins-Black.woff2') format('woff2');
+  // font-display: optional;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 800;
+  src: local('Poppins'), url('../fonts/Poppins/woff2/Poppins-ExtraBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 700;
+  src: local('Poppins'), url('../fonts/Poppins/woff2/Poppins-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 500;
+  src: local('Poppins'), url('../fonts/Poppins/woff2/Poppins-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 400;
+  src: local('Poppins'), url('../fonts/Poppins/woff2/Poppins-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 200;
+  src: local('Poppins'), url('../fonts/Poppins/woff2/Poppins-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 100;
+  src: local('Poppins'), url('../fonts/Poppins/woff2/Poppins-ExtraLight.woff2') format('woff2');
+}
+
+$font-poppins: 'Poppins', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+//~ Colors : main palette
+$dark-01: #1d1e1c;
+$light-01: #f1f6ff;
+
+//~ Box shadows
+$box-shadow-01: rgba(0, 0, 0, 0.2) 0px 0px 50px 8px;
+$box-shadow-02: rgba(99, 96, 96, 0.3) 0px 0px 25px 5px;
+
+//~ Drop shadow
+$drop-shadow-01: drop-shadow(2px 3px 2px rgba(0, 0, 0, 0.3));
+$drop-shadow-02: drop-shadow(4px 6px 3px rgba(0, 0, 0, 0.747));
+
+//~ Breakpoints Media queries
+$breakpoint-xxxlarge: 1920px;
+$breakpoint-xxlarge: 1536px;
+$breakpoint-xlarge: 1440px;
+$breakpoint-large: 1280px;
+$breakpoint-medium: 1160px;
+$breakpoint-small: 980px;
+$breakpoint-xsmall: 768px;
+$breakpoint-xxsmall: 580px;
+$breakpoint-xxxsmall: 480px;
+
+//& Theme Global
+$themeSite: (
+  light: (
+    background: $light-01,
+    link: $dark-01,
+    title: $dark-01,
+    text: $dark-01,
+  ),
+  dark: (
+    background: $dark-01,
+    link: $light-01,
+    title: $light-01,
+    text: $light-01,
+  ),
+);

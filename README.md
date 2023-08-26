@@ -1,4 +1,6 @@
-# React Boilerplate
+# React/RTK - Clean architecture template
+
+![banner](./__docs__/media/banner%20–%201.png)
 
 ## Introduction
 
@@ -21,13 +23,6 @@ The purpose of this repository is to provide a boilerplate for starting a React 
 |  |  |  ├── App.tsx
 |  |  |  ├── Components
 |  |  |  |  ├── IndexComponents.tsx
-|  |  |  |  └── Loader
-|  |  |  |     ├── index.tsx
-|  |  |  |     ├── Media
-|  |  |  |     ├── Style
-|  |  |  |     |  ├── main.scss
-|  |  |  |     |  └── _theme.scss
-|  |  |  |     └── Types
 |  |  |  ├── Layout
 |  |  |  |  ├── Footer
 |  |  |  |  ├── Header
@@ -51,24 +46,12 @@ The purpose of this repository is to provide a boilerplate for starting a React 
 |  |  |  |  |  ├── Styles
 |  |  |  |  |  |  └── main.scss
 |  |  |  |  |  └── Types
-|  |  |  |  ├── IndexPages.tsx
-|  |  |  |  ├── Login
-|  |  |  |  |  ├── index.tsx
-|  |  |  |  |  ├── Media
-|  |  |  |  |  ├── Styles
-|  |  |  |  |  |  └── main.scss
-|  |  |  |  |  └── Types
 |  |  |  |  ├── NoPage
 |  |  |  |  |  ├── index.tsx
 |  |  |  |  |  ├── Media
 |  |  |  |  |  ├── Style
 |  |  |  |  |  └── Types
-|  |  |  |  └── Signup
-|  |  |  |     ├── index.tsx
-|  |  |  |     ├── Media
-|  |  |  |     ├── Styles
-|  |  |  |     |  └── main.scss
-|  |  |  |     └── Types
+|  |  |  |  ├── IndexPages.tsx
 |  |  |  └── Utils
 |  |  |     ├── i18n
 |  |  |     └── Seo
@@ -84,19 +67,13 @@ The purpose of this repository is to provide a boilerplate for starting a React 
 |  |  |  └── Routes.tsx
 |  |  ├── Store
 |  |  |  ├── API
-|  |  |  |  ├── authentication.ts
-|  |  |  |  └── index.ts
-|  |  |  ├── index.ts
 |  |  |  ├── Middlewares
 |  |  |  |  ├── index.ts
 |  |  |  |  └── theme.ts
 |  |  |  └── Reducers
 |  |  |     ├── Features
-|  |  |     |  └── Auth
-|  |  |     |     └── index.ts
 |  |  |     ├── index.ts
-|  |  |     └── Payload
-|  |  |        └── index.ts
+|  |  |  ├── index.ts
 |  |  └── Types
 |  |     ├── custom.d.ts
 |  |     ├── GlobalTypes
@@ -132,24 +109,6 @@ pnpm install
 npm run dev
 # pnpm
 pnpm run dev
-```
-
-## Makefile usage
-
-To use Make, you need to install it or ensure that it is installed
-
-```sh
-# check if it installed
-make --version
-
-# or install it (Linux)
-sudo apt install make
-```
-
-- Launch development environment
-
-```sh
-    make dev
 ```
 
 ---

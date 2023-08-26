@@ -1,0 +1,18 @@
+@use './mixins.scss';
+@use './vars.scss';
+
+//& THEMIFY
+@include mixins.themify(vars.$themeSite) {
+  h1,
+  h2 {
+    color: mixins.themed('title');
+  }
+
+  a {
+    color: mixins.themed('link');
+  }
+
+  p {
+    color: mixins.themed('text');
+  }
+}

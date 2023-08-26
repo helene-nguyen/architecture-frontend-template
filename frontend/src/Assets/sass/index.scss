@@ -1,0 +1,31 @@
+@use './reset.scss';
+@use './vars.scss';
+
+:root {
+  scroll-behavior: smooth;
+  background-color: vars.$light-01;
+  // font
+  font-family: vars.$font-poppins;
+  font-weight: 500;
+
+  // hide scrollbar and keep functionnality
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  // ::selection {
+  // }
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+    supported by Chrome, Edge, Opera and Firefox */
+}

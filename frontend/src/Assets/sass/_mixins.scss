@@ -1,0 +1,41 @@
+@use './vars.scss';
+
+//~ FLEXBOX
+@mixin flexbox($justify, $align-items, $direction: true) {
+  display: flex;
+
+  @if $direction {
+    flex-direction: $direction;
+  }
+
+  justify-content: $justify;
+  align-items: $align-items;
+}
+
+//~ POSITION
+@mixin position($position, $index: true) {
+  position: $position;
+
+  @if $index {
+    z-index: $index;
+  }
+}
+
+//~ THEMIFY
+@mixin themify($themes) {
+  @each $nameTheme, $values in $themes {
+    .theme--#{$nameTheme} {
+      -webkit-transition: all 0.4s ease-out;
+      -moz-transition: all 0.4s ease-out;
+      -o-transition: all 0.4s ease-out;
+      transition: all 0.4s ease-out;
+
+      $theme-map: $values !global;
+      @content;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
