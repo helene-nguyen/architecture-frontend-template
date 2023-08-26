@@ -1,0 +1,31 @@
+{
+    "name": "React Boilerplate",
+    "short_name": "React",
+    "start_url": ".",
+    "icons": [
+      {
+        "src": "./favicon/favicon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "./favicon/favicon.svg",
+        "sizes": "any",
+        "type": "image/svg+xml"
+      },
+      {
+        "src": "./favicon/favicon.svg",
+        "sizes": "any",
+        "type": "image/svg+xml",
+        "purpose": "maskable"
+      },
+      {
+        "src": "./favicon/favicon.ico",
+        "sizes": "64x64 32x32 24x24 16x16",
+        "type": "image/x-icon"
+      }
+    ],
+    "display": "standalone",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff"
+  }

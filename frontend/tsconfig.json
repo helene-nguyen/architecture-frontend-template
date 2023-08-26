@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "esModuleInterop": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "removeComments": false,
+
+    /* Linting */
+    "strict": true,
+    "sourceMap": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "types": ["node"]
+  },
+  "lib": ["es2015"],
+  "compileOnSave": true,
+  "include": ["./src/**/**/**/*.tsx", "./src/Types/*.d.ts", "./src/Store/**/**/**/*.ts", "Store/**/**/*.ts", "*.d.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "no-restricted-imports": "off",
+  "@typescript-eslint/no-restricted-imports": [
+    "warn",
+    {
+      "name": "react-redux",
+      "importNames": ["useSelector", "useDispatch"],
+      "message": "Use typed hooks `useAppDispatch` and `useAppSelector` instead."
+    }
+  ]
+}
