@@ -1,8 +1,9 @@
 //~ Import modules
+import themeReducer from './Theme';
 
 const reducers = {
-  // theme: themeReducer,
+  theme: themeReducer,
 };
 
-//export all combined reducers to use in the store
+// Export all combined reducers to use in the store
 export default reducers;

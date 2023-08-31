@@ -1,0 +1,59 @@
+@mixin bounce {
+  @keyframes bounce {
+    0% {
+      transform: scale(1);
+    }
+
+    40% {
+      transform: scale(0.8);
+    }
+
+    70% {
+      transform: scale(1.2);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+@mixin rotate {
+  @keyframes rotate {
+    0% {
+      transform: rotate(180deg) scale(0.3);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+@mixin zoom {
+  @keyframes zoom {
+    0% {
+      transform: scale(0);
+    }
+
+    30% {
+      transform: scale(0.1);
+    }
+
+    40% {
+      transform: scale(0.3);
+    }
+
+    60% {
+      transform: scale(0.4);
+    }
+
+    70% {
+      transform: scale(0.5);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+}
