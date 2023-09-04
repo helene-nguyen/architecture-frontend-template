@@ -6,7 +6,7 @@ import express from 'express';
 const app = express();
 
 // serve up production assets
-app.use(express.static('../client/build'));
+app.use(express.static('../frontend/dist'));
 
 // let the react app to handle any unknown routes
 // serve up the index.html if express doesn't recognize the route

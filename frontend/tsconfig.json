@@ -23,7 +23,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "baseUrl": "./",
+    "baseUrl": "src",
     "types": ["node"]
   },
   "lib": ["es2015"],

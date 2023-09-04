@@ -1,9 +1,9 @@
-// @use '../../../../Assets/sass/mixins.scss';
+@use '../../../../Assets/sass/mixins.scss';
 @use '../../../../Assets/sass/vars';
-// @use './animations.scss';
+@use './animations.scss';
 
 .theme-btn {
-  // @include mixins.flexbox(center, flex-start);
+  @include mixins.flexbox(center, flex-start);
   cursor: pointer;
   //boxmodel
   padding: 0 0.3rem;
@@ -18,7 +18,7 @@
   transform: scale(0.7);
 
   &__circle {
-    // @include mixins.flexbox(center, center);
+    @include mixins.flexbox(center, center);
     margin: 0.5rem 0;
     border-radius: 32px;
     width: 2.3rem;
@@ -28,8 +28,8 @@
     z-index: 5;
     transition: all 0.2s ease-in-out 0.02s;
 
-    // @include animations.bounce;
-    // animation: bounce 0.8s linear 0.7s;
+    @include animations.bounce;
+    animation: bounce 0.8s linear 0.7s;
 
     &:hover {
       box-shadow: -2px 2px 10px #949494, 2px -2px 15px #ffffff;
@@ -45,13 +45,13 @@
     margin: 0.3rem;
 
     &__moon {
-      // @include animations.rotate;
-      // animation: rotate 0.5s ease-in-out;
+      @include animations.rotate;
+      animation: rotate 0.5s ease-in-out;
     }
 
     &__sun {
-      // @include animations.zoom;
-      // animation: zoom 0.5s ease-in-out;
+      @include animations.zoom;
+      animation: zoom 0.5s ease-in-out;
 
       & :nth-child(2) {
         transform: translate(135px, -10px) rotate(90deg);
