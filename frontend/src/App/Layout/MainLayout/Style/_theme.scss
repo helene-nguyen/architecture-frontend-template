@@ -1,0 +1,19 @@
+// @use '../../../../Assets/sass/.scss';
+@use '../../../../Assets/sass/mixins.scss';
+@use '../../../../Assets/sass/vars.scss';
+
+$themeLayout: (
+  light: (
+    background: vars.$light-01,
+  ),
+  dark: (
+    background: vars.$dark-01,
+  ),
+);
+
+//& THEMIFY
+@include mixins.themify($themeLayout) {
+  .main-layout {
+    background-color: vars.$dark-01;
+  }
+}

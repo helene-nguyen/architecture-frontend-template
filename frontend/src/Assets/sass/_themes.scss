@@ -3,6 +3,7 @@
 
 //& THEMIFY
 @include mixins.themify(vars.$themeSite) {
+  background-color: mixins.themed('background');
   h1,
   h2 {
     color: mixins.themed('title');
