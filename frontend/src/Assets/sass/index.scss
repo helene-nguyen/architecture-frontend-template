@@ -1,5 +1,7 @@
-@use './reset.scss';
+@use './mixins.scss';
 @use './vars.scss';
+@use './themes.scss';
+@use './reset.scss';
 
 :root {
   scroll-behavior: smooth;
