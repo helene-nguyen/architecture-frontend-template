@@ -3,44 +3,44 @@
 @font-face {
   font-family: 'Poppins';
   font-weight: 900;
-  src: local('Poppins'), url('../fonts/Poppins/woff2/Poppins-Black.woff2') format('woff2');
+  src: local('Poppins'), url('@/Assets/fonts/Poppins/woff2/Poppins-Black.woff2') format('woff2');
   // font-display: optional;
 }
 
 @font-face {
   font-family: 'Poppins';
   font-weight: 800;
-  src: local('Poppins'), url('../fonts/Poppins/woff2/Poppins-ExtraBold.woff2') format('woff2');
+  src: local('Poppins'), url('@/Assets/fonts/Poppins/woff2/Poppins-ExtraBold.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Poppins';
   font-weight: 700;
-  src: local('Poppins'), url('../fonts/Poppins/woff2/Poppins-Bold.woff2') format('woff2');
+  src: local('Poppins'), url('@/Assets/fonts/Poppins/woff2/Poppins-Bold.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Poppins';
   font-weight: 500;
-  src: local('Poppins'), url('../fonts/Poppins/woff2/Poppins-Medium.woff2') format('woff2');
+  src: local('Poppins'), url('@/Assets/fonts/Poppins/woff2/Poppins-Medium.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Poppins';
   font-weight: 400;
-  src: local('Poppins'), url('../fonts/Poppins/woff2/Poppins-Regular.woff2') format('woff2');
+  src: local('Poppins'), url('@/Assets/fonts/Poppins/woff2/Poppins-Regular.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Poppins';
   font-weight: 200;
-  src: local('Poppins'), url('../fonts/Poppins/woff2/Poppins-Light.woff2') format('woff2');
+  src: local('Poppins'), url('@/Assets/fonts/Poppins/woff2/Poppins-Light.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Poppins';
   font-weight: 100;
-  src: local('Poppins'), url('../fonts/Poppins/woff2/Poppins-ExtraLight.woff2') format('woff2');
+  src: local('Poppins'), url('@/Assets/fonts/Poppins/woff2/Poppins-ExtraLight.woff2') format('woff2');
 }
 
 $font-poppins: 'Poppins', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
