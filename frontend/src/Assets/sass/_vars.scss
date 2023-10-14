@@ -46,8 +46,10 @@
 $font-poppins: 'Poppins', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 //~ Colors : main palette
-$dark-01: #1d1e1c;
-$light-01: #f1f6ff;
+$dark-primary: #1d1e1c;
+$dark-secondary: #393949;
+$light-primary: #f1f6ff;
+$red-primary: #e62a42;
 
 //~ Box shadows
 $box-shadow-01: rgba(0, 0, 0, 0.2) 0px 0px 50px 8px;
@@ -71,15 +73,15 @@ $breakpoint-xxxsmall: 480px;
 //& Theme Global
 $themeSite: (
   light: (
-    background: $light-01,
-    link: $dark-01,
-    title: $dark-01,
-    text: $dark-01,
+    background: $light-primary,
+    link: $dark-primary,
+    title: $dark-primary,
+    text: $dark-primary,
   ),
   dark: (
-    background: $dark-01,
-    link: $light-01,
-    title: $light-01,
-    text: $light-01,
+    background: $dark-primary,
+    link: $light-primary,
+    title: $light-primary,
+    text: $light-primary,
   ),
 );
