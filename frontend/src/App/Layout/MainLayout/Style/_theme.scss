@@ -3,16 +3,16 @@
 
 $themeLayout: (
   light: (
-    background: vars.$light-01,
+    background: vars.$light-primary,
   ),
   dark: (
-    background: vars.$dark-01,
+    background: vars.$dark-primary,
   ),
 );
 
 //& THEMIFY
 @include mixins.themify($themeLayout) {
   .main-layout {
-    background-color: vars.$dark-01;
+    background-color: vars.$dark-primary;
   }
 }
