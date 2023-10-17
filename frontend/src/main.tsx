@@ -3,22 +3,23 @@ import './Assets/sass/index.scss';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-// import { Provider } from 'react-redux';
-// import { store } from './Store';
+import { Provider } from 'react-redux';
+import { store } from './Store';
 import App from './App/App';
 //& API Provider
-// import { ApiProvider } from '@reduxjs/toolkit/query/react';
+import { ApiProvider } from '@reduxjs/toolkit/query/react';
+import { apiSlice } from './Store/API';
 
 const root = createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
   <StrictMode>
     <BrowserRouter>
-      {/* <ApiProvider api={apiSlice}> */}
-        {/* <Provider store={store}> */}
+      <ApiProvider api={apiSlice}>
+        <Provider store={store}>
           <App />
-        {/* </Provider> */}
-      {/* </ApiProvider> */}
+        </Provider>
+      </ApiProvider>
     </BrowserRouter>
   </StrictMode>
 );
