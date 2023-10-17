@@ -1,6 +1,6 @@
 //~ Imports Modules
 import './Styles/main.scss';
-import { ReactComponent as SpinnerSVG } from './Media/spinner.svg';
+import SpinnerSVG  from './Media/spinner.svg?react';
 
 //~ Component
 const Spinner = () => {

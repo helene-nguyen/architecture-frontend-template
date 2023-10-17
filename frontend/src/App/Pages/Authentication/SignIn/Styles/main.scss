@@ -1,0 +1,14 @@
+.signin {
+  width: 50%;
+  min-height: 100vh;
+  margin: auto;
+  padding: 2rem 0 0;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  & form {
+    display: flex;
+    flex-direction: column;
+  }
+}

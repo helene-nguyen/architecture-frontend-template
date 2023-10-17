@@ -1,7 +1,8 @@
 //~ Import modules
 import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { mainRoutes } from '../Routes';
+import { mainRoutes, protectedRoutes } from '../Routes';
+import { Protected } from './Components/IndexComponents';
 import Layout from './Layout/MainLayout';
 
 //~ Component
@@ -21,6 +22,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Layout />}>
             {mainRoutes}
+              <Route element={<Protected />}>
+                {protectedRoutes}
+              </Route>
           </Route>
         </Routes>
       )}
