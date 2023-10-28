@@ -1,0 +1,10 @@
+@use './theme.scss';
+
+.header {
+  height: 10rem;
+  h1 {
+    line-height: 10rem;
+    text-align: center;
+    font-size: xx-large;
+  }
+}

@@ -1,0 +1,27 @@
+@use '../../../../Assets/sass/vars.scss';
+@use '../../../../Assets/sass/mixins.scss';
+
+$themeBtn: (
+  light: (
+    background: vars.$blue-primary,
+    fill: vars.$blue-secondary,
+  ),
+  dark: (
+    background: vars.$blue-secondary,
+    fill: vars.$blue-primary,
+  ),
+);
+
+@include mixins.themify($themeBtn) {
+  .theme-btn {
+    &__circle {
+      background: mixins.themed('background');
+    }
+
+    &__icon {
+      &--fill {
+        fill: mixins.themed('fill');
+      }
+    }
+  }
+}
