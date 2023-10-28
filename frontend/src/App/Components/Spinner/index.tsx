@@ -1,14 +1,9 @@
 //~ Imports Modules
 import './Styles/main.scss';
-import SpinnerSVG  from './Media/spinner.svg?react';
 
 //~ Component
 const Spinner = () => {
-  return (
-    <div>
-      <SpinnerSVG className="spinner" />
-    </div>
-  );
+  return <div className="loader-drop"></div>;
 };
 
 export default Spinner;

@@ -1,5 +1,5 @@
 //~ Import modules ordered by A-Z
-import Protected from "./Authentication/Protected";
+import Protected from "../Pages/ProtectedPages/Protected";
 import Spinner from "./Spinner";
 import ThemeBtn from "./ThemeBtn";
 

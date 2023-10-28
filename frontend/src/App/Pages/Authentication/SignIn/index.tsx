@@ -10,7 +10,7 @@ import { RootState } from '../../../../Types/GlobalTypes/Store';
 //~ Component
 const SignIn = () => {
   const [displayMsg, setDisplayMsg] = useState('User disconnected');
-  const { user, status } = useSelector((state: RootState) => state.auth);
+  const { user, connected } = useSelector((state: RootState) => state.auth);
 
   useEffect(() => {
     if (user) {
@@ -39,7 +39,7 @@ const SignIn = () => {
   return (
     <section className="signin">
 
-      {status === 'disconnected' ? (
+      {!connected ? (
         <form action="post" onSubmit={doSignIn}>
           <h1 className="big-title">Sign In</h1>
           <label htmlFor="email">Email</label>

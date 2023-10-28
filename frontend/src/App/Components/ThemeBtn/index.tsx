@@ -2,8 +2,8 @@
 import './Styles/main.scss';
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { ReactComponent as Sun } from './Media/sun.svg';
-import { ReactComponent as Moon} from './Media/moon.svg';
+import Sun from './Media/sun.svg?react';
+import Moon from './Media/moon.svg?react';
 import { toggleTheme } from '../../../Store/Reducers/Theme';
 import { RootState } from '../../../Types/GlobalTypes/Store';
 

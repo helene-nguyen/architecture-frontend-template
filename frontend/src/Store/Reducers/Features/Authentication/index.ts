@@ -1,13 +1,12 @@
 //~ Import modules
 import { createSlice } from '@reduxjs/toolkit';
-import { RootState } from 'src/Types/GlobalTypes/Store';
 
 //~ Initial state
 const initialState = {
   user: null,
   accessToken: null,
   refreshToken: null,
-  status: 'disconnected'
+  connected: false,
 };
 
 export const authSlice = createSlice({
@@ -21,18 +20,17 @@ export const authSlice = createSlice({
       state.user = user;
       state.accessToken = tokens.accessToken;
       state.refreshToken = tokens.refreshToken;
-      state.status = 'connected';
+      state.connected = true;
     },
     // We want it back to null when log out
     logOut: (state) => {
       state.user = null;
       state.accessToken = null;
+      state.refreshToken = null;
+      state.connected = false;
     },
   },
 });
 
 export const { setCredentials, logOut } = authSlice.actions;
 export default authSlice.reducer;
-
-export const selectCurrentUser = (state: RootState) => state.auth.user;
-export const selectCurrentToken = (state: RootState) => state.auth.accessToken;

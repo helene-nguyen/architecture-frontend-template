@@ -1,0 +1,42 @@
+@use './animation.scss';
+@use '../../../../Assets/sass/vars.scss';
+
+.spinner {
+  width: 5rem;
+}
+
+.dark-frag {
+  fill: vars.$dark-secondary;
+  filter: drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.5));
+}
+
+.lotus-frag,
+.point-frag {
+  fill: vars.$red-primary;
+  filter: drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.5));
+}
+
+.circle-draw {
+  stroke-width: 1px;
+  stroke-linecap: round;
+  stroke: vars.$red-primary;
+  @include animation.circle-spinner;
+  animation: dash-circle 2s ease-in-out alternate infinite;
+}
+
+.lotus-draw {
+  stroke-width: 1px;
+  stroke-linecap: round;
+  stroke: vars.$red-primary;
+  @include animation.lotus-spinner;
+  animation: dash-lotus 2s ease-in-out alternate infinite;
+}
+
+.dark-draw {
+  stroke-width: 0.5px;
+  stroke-linecap: round;
+  fill: vars.$dark-secondary;
+  stroke: vars.$dark-secondary;
+  @include animation.dark-frag-spinner;
+  animation: dash-dark 2s ease-in-out alternate infinite;
+}

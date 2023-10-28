@@ -1,6 +1,6 @@
 //~ Imports Modules
 import './Styles/main.scss';
-import { Spinner } from '../../../Components/IndexComponents';
+import { Spinner, ThemeBtn } from '../../../Components/IndexComponents';
 
 //~ Component
 const Home = () => {
@@ -8,6 +8,7 @@ const Home = () => {
     <section className="home">
       <h1>Hello from Home page</h1>
       <Spinner />
+      <ThemeBtn/>
     </section>
   );
 };

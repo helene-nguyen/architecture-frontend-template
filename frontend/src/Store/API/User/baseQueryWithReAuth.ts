@@ -19,7 +19,6 @@ export const baseQueryWithReAuth: BaseQueryFn<string | FetchArgs, unknown, Fetch
   await mutex.waitForUnlock();
 
   let result = await baseQuery(args, api, extraOptions);
-  
 
   // We want to send refresh token to get new access token
   if (result?.error?.status === 400 || 403) {
@@ -30,7 +29,7 @@ export const baseQueryWithReAuth: BaseQueryFn<string | FetchArgs, unknown, Fetch
       try {
         //* Get refresh token from the store
         const refreshToken = (api.getState() as RootState).auth.refreshToken;
-        
+
         const refreshResult = await baseQuery(
           {
             url: '/refreshToken',
@@ -43,9 +42,10 @@ export const baseQueryWithReAuth: BaseQueryFn<string | FetchArgs, unknown, Fetch
 
         if (refreshResult?.data) {
           const user = (api.getState() as RootState).auth.user;
+          console.log('REFRESH TOKEN', refreshResult.data);
 
           // Store the new token with setCredentials
-          api.dispatch(setCredentials({ ...refreshResult.data, user }));
+          api.dispatch(setCredentials({ tokens: refreshResult.data, user }));
 
           // Retry the original query with access token
           result = await baseQuery(args, api, extraOptions);

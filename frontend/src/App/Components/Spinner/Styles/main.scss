@@ -1,42 +1,51 @@
 @use './animation.scss';
 @use '../../../../Assets/sass/vars.scss';
 
-.spinner {
-  width: 5rem;
+.loader-drop {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
+  margin: 1rem auto 2.75rem;
+  &:before,
+  &:after {
+    border: 1px solid purple;
+    background-color: white;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: skBounce 2s linear infinite;
+  }
+  &:after {
+    animation-delay: -1s;
+  }
 }
 
-.dark-frag {
-  fill: vars.$dark-secondary;
-  filter: drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.5));
-}
-
-.lotus-frag,
-.point-frag {
-  fill: vars.$red-primary;
-  filter: drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.5));
-}
-
-.circle-draw {
-  stroke-width: 1px;
-  stroke-linecap: round;
-  stroke: vars.$red-primary;
-  @include animation.circle-spinner;
-  animation: dash-circle 2s ease-in-out alternate infinite;
-}
-
-.lotus-draw {
-  stroke-width: 1px;
-  stroke-linecap: round;
-  stroke: vars.$red-primary;
-  @include animation.lotus-spinner;
-  animation: dash-lotus 2s ease-in-out alternate infinite;
-}
-
-.dark-draw {
-  stroke-width: 0.5px;
-  stroke-linecap: round;
-  fill: vars.$dark-secondary;
-  stroke: vars.$dark-secondary;
-  @include animation.dark-frag-spinner;
-  animation: dash-dark 2s ease-in-out alternate infinite;
+@keyframes skBounce {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.5);
+  }
+  60% {
+    transform: scale(2);
+    opacity: 0.5;
+  }
+  80% {
+    transform: scale(2.5);
+    opacity: 0.25;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
 }

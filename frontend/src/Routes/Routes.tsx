@@ -13,7 +13,7 @@ const mainRouter = [
 ];
 
 const protectedRouter = [
-  { name: 'dashboard', protectedPath: '/dashboard', protectedElement: <Dashboard /> },
+  { name: 'dashboard', display: true, protectedPath: '/dashboard', protectedElement: <Dashboard /> },
   { name: 'profile', protectedPath: '/profile', protectedElement: <Dashboard /> },
 ];
 

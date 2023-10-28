@@ -22,7 +22,7 @@ export const apiSlice = createApi({
       return headers;
     },
   }),
-  tagTypes: ['USER'],
+  tagTypes: ['USER', "ARTICLE"],
   // Let's empty to inject endpoints => code splitting
   endpoints: () => ({}),
 });
