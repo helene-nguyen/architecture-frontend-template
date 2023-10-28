@@ -1,0 +1,22 @@
+@use '../../../../Assets/sass/vars.scss';
+@use '../../../../Assets/sass/mixins.scss';
+
+$themeSpinner: (
+  light: (
+    border: vars.$blue-primary,
+    background: vars.$blue-primary,
+  ),
+  dark: (
+    border: vars.$blue-secondary,
+    background: vars.$blue-secondary,
+  ),
+);
+
+@include mixins.themify($themeSpinner) {
+  .loader-drop {
+    &:before,
+    &:after {
+      background-color: mixins.themed('background');
+    }
+  }
+}

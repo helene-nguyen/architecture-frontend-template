@@ -1,5 +1,4 @@
-@use './animation.scss';
-@use '../../../../Assets/sass/vars.scss';
+@use './theme.scss';
 
 .loader-drop {
   width: 1.5rem;
@@ -8,8 +7,6 @@
   margin: 1rem auto 2.75rem;
   &:before,
   &:after {
-    border: 1px solid purple;
-    background-color: white;
     content: '';
     display: block;
     width: 100%;
