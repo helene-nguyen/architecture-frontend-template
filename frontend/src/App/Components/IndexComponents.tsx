@@ -1,6 +1,6 @@
 //~ Import modules ordered by A-Z
-import Protected from "../Pages/ProtectedPages/Protected";
-import Spinner from "./Spinner";
-import ThemeBtn from "./ThemeBtn";
+import Form from './Form';
+import Spinner from './Spinner';
+import ThemeBtn from './ThemeBtn';
 
-export { Spinner, ThemeBtn, Protected};
+export { Spinner, ThemeBtn, Form };

@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { useLoginMutation } from '../../../../Store/API/User/authentication';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../../Types/GlobalTypes/Store';
+import { Form } from '../../../Components/IndexComponents';
 
 //~ Component
 const SignIn = () => {
@@ -36,18 +37,14 @@ const SignIn = () => {
       console.log('ERROR', err);
     }
   };
+
   return (
     <section className="signin">
-
       {!connected ? (
-        <form action="post" onSubmit={doSignIn}>
+        <>
           <h1 className="big-title">Sign In</h1>
-          <label htmlFor="email">Email</label>
-          <input type="text" name="email" placeholder="email" defaultValue={'contact@yumicode.net'} />
-          <label htmlFor="password">Password</label>
-          <input type="text" placeholder="password" name="password" defaultValue={'N6y$Ozddzt=1aa'} />
-          <button type="submit">submit</button>
-        </form>
+          <Form submit={doSignIn} />
+        </>
       ) : (
         <h1>Message : {displayMsg}</h1>
       )}

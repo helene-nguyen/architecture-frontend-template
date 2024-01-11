@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { mainRoutes, protectedRoutes } from '../Routes';
-import { Protected } from './Components/IndexComponents';
+import { Protected } from './Pages/IndexPages';
 import Layout from './Layout/MainLayout';
 
 //~ Component
